@@ -1,0 +1,24 @@
+<h3>User Login</h3>
+
+
+<form class="form col col-4 offset-4">
+        <div class="form-group">
+          <label for="exampleInputEmail1">User Name</label>
+          <div *ngIf="loginFailed" class="alert alert-info">
+              unable to verify user credentials
+            </div>
+          <input type="email" [(ngModel)]="userName" name="userName"  (ngModelChange)="userChanged()" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User Name">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <div *ngIf="userNameError" class="alert alert-info">
+          please enter a valid user name to login
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" [(ngModel)]="password" name="password" (ngModelChange)="passwordChanged()" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div *ngIf="passwordError"class="alert alert-info">
+            please enter a valid password to login
+          </div>
+        <button (click)="login()" type="submit" class="btn btn-info">Login</button>
+      </form>

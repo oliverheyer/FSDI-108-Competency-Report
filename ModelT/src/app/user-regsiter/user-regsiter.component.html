@@ -1,0 +1,63 @@
+<h3>User Registration</h3>
+
+<div class="row">
+    <div class="form col col-4 offset-4">
+    <form>
+        <div class="form-group"> 
+          <label for="exampleInputEmail1">First Name</label>
+          <input type="text1" [(ngModel)]="model.firstName" name="fName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Oliver">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Last Name</label>
+            <input type="text2" [(ngModel)]="model.lastName" name="lName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Heyer">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" [(ngModel)]="model.email" name="email" (ngModelChange)="emailChanged()" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="aachen@gmail.com">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div *ngIf="emailError" class="alert alert-info">
+                please enter valid email to register 
+              </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <input type="test3" [(ngModel)]="model.address" name="addres" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="street address, city, state, zip code, country">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input type="" [(ngModel)]="model.phone" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="(760) 514-8989">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">User Name</label>
+            <input type="text4" [(ngModel)]="model.userName" name="userName" (ngModelChange)="userValueChanged()" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Aachen800">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div *ngIf="userNameError" class="alert alert-info">
+            3 or more characters required for valid user name
+          </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" [(ngModel)]="model.password" name="password" (ngModelChange)="passwordChanged()" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div *ngIf="passwordError" class="alert alert-info">
+                please enter 6 or more characters for valid password 
+              </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Retype Password</label>
+            <input type="password" [(ngModel)]="retypePassword" name="passwordAgain" (ngModelChange)="passwordChanged()" class="form-control" id="exampleInputPassword1" placeholder="Retype Password">
+          </div>
+          <div *ngIf="passMatchError" class="alert alert-info">
+                password must match to register
+              </div>
+        <!-- <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <button (click)="registerUser()" type="submit" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+</div>

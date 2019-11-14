@@ -1,0 +1,15 @@
+.top{
+    text-align: center;
+    font-family: cursive;
+    font-size: 35px;
+}
+
+.content{
+text-align: center;
+margin-left: 50px;
+margin-right: 50px;
+}
+
+.img{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6MeTfT8gCEKXBvYyPZhNga0P_oPs4Bt1F-DS23U1zq_-Y7VBR&s);
+}

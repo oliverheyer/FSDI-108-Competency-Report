@@ -1,0 +1,38 @@
+
+<!-- <h5>Temperature Converter</h5>
+<hr>
+
+<div>
+<label>Fahrenheit</label>
+<input type="number" [(ngModel)]="fahrenheit" name="fahrenheit" (ngModelChange)="convertFtoC()">
+
+<label>Celsius</label>
+<input type="number" [(ngModel)]="celsius" name="celsius" (ngModelChange)="convertCtoF()">
+
+
+</div> -->
+
+
+<div class="wrapper">
+        <div class="card">
+            <header>Temperature Converter</header>
+            <div>
+                <div class="temp-fields">
+                    <h3 class="spacing">Fahrenheit</h3>
+                    <input type="number" [(ngModel)]="fahrenheit" name="fahrenheit" (ngModelChange)="convertFtoC()" id="fahrenheit" />
+                </div>
+                <div class="temp-fields">
+                    <h3 class="spacing">Celsius</h3>
+                    <input input type="number" [(ngModel)]="celsius" name="celsius" (ngModelChange)="convertCtoF()" id="celsius" />
+                </div>
+                <!-- <div class="temp-fields">
+                    <h3 class="spacing">Kelvin</h3>
+                    <input id="kelvin" value="0"/>
+                </div> -->
+            </div>
+            <!-- <div>
+                <button id="submit" class="spacing" type="submit" value="submit">Convert</button>
+                <button id="reset" class="spacing" type="reset" value="reset">Reset</button>
+            </div> -->
+        </div>
+    </div>
